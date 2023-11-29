@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Vissoft_SkyMath.props" />
+</Project>
