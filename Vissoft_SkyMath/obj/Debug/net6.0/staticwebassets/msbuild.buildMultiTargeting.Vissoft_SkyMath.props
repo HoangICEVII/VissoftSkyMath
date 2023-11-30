@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\Vissoft_SkyMath.props" />
-</Project>
