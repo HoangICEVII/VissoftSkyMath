@@ -16,9 +16,9 @@ namespace Vissoft
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var serverVersion = new MySqlServerVersion(new Version(8, 0, 34));
             services.AddDbContext<VissoftDbContext>(options =>
-            options.UseMySql(Configuration.GetConnectionString("default"), serverVersion));
+            options.UseMySql(Configuration.GetConnectionString("default"),
+            ServerVersion.AutoDetect(Configuration.GetConnectionString("default"))));
             //options.UseMySql("server=localhost;port=3306;database=vissoft;user=root;password=123456", serverVersion, b => b.MigrationsAssembly("Vissoft.Infrastructure")));
 
             services.AddEndpointsApiExplorer();
