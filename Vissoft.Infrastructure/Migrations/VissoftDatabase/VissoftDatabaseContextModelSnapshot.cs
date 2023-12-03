@@ -2,20 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Vissoft.Infrastructure.Data;
 
 #nullable disable
 
-namespace Vissoft.Infrastructure.Migrations
+namespace Vissoft.Infrastructure.Migrations.VissoftDatabase
 {
-    [DbContext(typeof(VissoftDbContext))]
-    [Migration("20231130165641_initDB")]
-    partial class initDB
+    [DbContext(typeof(VissoftDatabaseContext))]
+    partial class VissoftDatabaseContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

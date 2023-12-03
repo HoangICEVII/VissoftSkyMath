@@ -4,10 +4,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Vissoft.Infrastructure.Migrations
+namespace Vissoft.Infrastructure.Migrations.VissoftDatabase
 {
     /// <inheritdoc />
-    public partial class initDB : Migration
+    public partial class VissoftMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

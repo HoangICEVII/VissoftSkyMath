@@ -8,7 +8,7 @@ namespace Vissoft.Extensions
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
             //bao gom cac service dependency injection
-            services.AddScoped<VissoftDbContext, VissoftDbContext>();
+            services.AddScoped<VissoftDatabaseContext, VissoftDatabaseContext>();
             return services;
         }
     }

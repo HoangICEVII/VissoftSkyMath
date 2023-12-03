@@ -8,7 +8,8 @@ namespace Vissoft.Core.Interfaces.IRepository
 {
     public interface ICourseRepository
     {
-        Task<List<CourseDto>> GetCourse(int pageIndex, int numberOfItem);
+        Task<List<CourseDto>> GetCourse();
+        Task<List<CourseDto>> GetCourseByGradeId(int gradeId);
         Task AddNewCourse(CourseCreateDto courseCreateDto);
         Task UpdateCourse(CourseUpdateDto courseUpdateDto);
         Task DeleteCourse(int couseId);

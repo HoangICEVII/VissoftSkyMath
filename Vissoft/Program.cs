@@ -1,38 +1,80 @@
-using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Vissoft.Application.Services;
+using Vissoft.Core.Entities;
+using Vissoft.Core.Interfaces.IRepository;
+using Vissoft.Core.Interfaces.IService;
+using Vissoft.Extensions;
+using Vissoft.Helpers;
 using Vissoft.Infrastructure.Data;
+using Vissoft.Infrastructure.Identity;
+using Vissoft.Infrastructure.Repositories;
 
-namespace Vissoft
+var builder = WebApplication.CreateBuilder(args);
+
+var connectionString = builder.Configuration.GetConnectionString("default");
+builder.Services.AddDbContext<VissoftDatabaseContext>(options =>
+            options.UseMySql(connectionString,
+            ServerVersion.AutoDetect(connectionString)));
+builder.Services.AddDbContext<IdentityDatabaseContext>(options =>
+            options.UseMySql(connectionString,
+            ServerVersion.AutoDetect(connectionString)));
+
+builder.Services.AddAuthentication(options =>
 {
-    public class Program
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
     {
-        public static async Task Main(string[] args)
-        {
-            var host = CreateHostBuilder(args).Build();
-            using (var scope = host.Services.CreateScope())
-            {
-                var services = scope.ServiceProvider;
-                var loggerfactory = scope.ServiceProvider.GetService<ILoggerFactory>();
-                try
-                {
-                    var context = services.GetRequiredService<VissoftDbContext>();
-                    await context.Database.MigrateAsync();
-                }
-                catch (Exception ex)
-                {
-                    var loger = loggerfactory.CreateLogger<VissoftDbContext>();
-                    loger.LogError(ex, "Something went wrong during migration");
-                }
-            }
-            host.Run();
+        ValidateIssuerSigningKey = true,
+        ValidateAudience = true,
+        ValidateIssuer = true,
+        ValidIssuer = builder.Configuration.GetSection("AppSettings:Issuer").Value,
+        ValidAudience = builder.Configuration.GetSection("AppSettings:Audience").Value,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration.GetSection("AppSettings:Token").Value!))
+    };
+});
 
-        }
+//Service Dependency Injection
+builder.Services.AddScoped<ICourseDataService, CourseDataService>();
+builder.Services.AddScoped<IUserService, UserService>();
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
-    }
-}
+//Repository Dependency Injection
+builder.Services.AddScoped<ICourseRepository, CourseRepository>();
+builder.Services.AddScoped<IGradeRepository, GradeRepository>();
+builder.Services.AddScoped<ILessonRepository, LessonRepository>();
+builder.Services.AddScoped<IThematicRepository, ThematicRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+
+//DbContext Denpendency Injection
+builder.Services.AddScoped<VissoftDatabaseContext, VissoftDatabaseContext>();
+builder.Services.AddScoped<IdentityDatabaseContext, IdentityDatabaseContext>();
+
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+builder.Services.AddAutoMapper(typeof(MappingProfiles));
+builder.Services.AddControllers();
+builder.Services.AddApplicationServices();
+//services.AddIdentityService(Configuration);
+
+var app = builder.Build();
+
+//app.UseMiddleware<ExceptionMiddle>();
+//app.UseStatusCodePagesWithReExecute("/error/{0}");
+app.UseSwagger();
+app.UseSwaggerUI();
+app.UseHttpsRedirection();
+//app.UseSwaggerGen();
+app.UseRouting();
+app.UseStaticFiles();
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.Run();
