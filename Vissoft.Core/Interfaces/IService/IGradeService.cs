@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Vissoft.Core.DTOs;
 
-namespace Vissoft.Core.Interfaces.IRepository
+namespace Vissoft.Core.Interfaces.IService
 {
-    public interface IGradeRepository
+    public interface IGradeService
     {
         Task<List<GradeDto>> GetGrade();
         Task AddNewGrade(GradeCreateDto gradeCreateDto);

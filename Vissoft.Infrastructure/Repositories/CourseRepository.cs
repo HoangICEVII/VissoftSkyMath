@@ -39,7 +39,7 @@ namespace Vissoft.Infrastructure.Repositories
         }
         public async Task UpdateCourse(CourseUpdateDto courseUpdateDto)
         {
-            var data = await _dbContext.Courses.Where(c => c.Id == courseUpdateDto.Id).ToListAsync();
+            var data = await _dbContext.Courses.Where(c => c.Id == courseUpdateDto.Id).FirstOrDefaultAsync();
             Course course = _mapper.Map<Course>(data);
             if (course != null)
             {
