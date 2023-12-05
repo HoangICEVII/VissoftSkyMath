@@ -25,8 +25,4 @@
     <ProjectReference Include="..\Vissoft.Core\Vissoft.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Migrations\" />
-  </ItemGroup>
-
 </Project>

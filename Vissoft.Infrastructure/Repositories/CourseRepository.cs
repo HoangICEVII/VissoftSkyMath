@@ -28,8 +28,7 @@ namespace Vissoft.Infrastructure.Repositories
         public async Task<List<CourseDto>> GetCourseByGradeId(int gradeId)
         {
             var data = await _dbContext.Courses.Where(c => c.GradeId == gradeId).ToListAsync();
-            List<CourseDto> courseDtos = _mapper.Map<List<Course>, List<CourseDto>>(data);
-            return courseDtos;
+            return _mapper.Map<List<Course>, List<CourseDto>>(data);
         }
         public async Task AddNewCourse(CourseCreateDto courseCreateDto)
         {

@@ -6,10 +6,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace Vissoft.Infrastructure.Migrations
+namespace Vissoft.Infrastructure.Migrations.IdentityDatabase
 {
     /// <inheritdoc />
-    public partial class IdentityMigration : Migration
+    public partial class identityDb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -203,8 +203,8 @@ namespace Vissoft.Infrastructure.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "17454cf1-6d42-4fa2-954b-1777af77c75c", "1", "Admin", "Admin" },
-                    { "c4c74edb-5a12-4051-bee7-351e52550dd7", "2", "User", "User" }
+                    { "3a231086-fd9d-43b9-9b22-b44921677cf0", "2", "User", "User" },
+                    { "82504c1b-e1dd-449f-81d3-83901fb7c226", "1", "Admin", "Admin" }
                 });
 
             migrationBuilder.CreateIndex(

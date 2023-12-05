@@ -8,11 +8,11 @@ using Vissoft.Infrastructure.Identity;
 
 #nullable disable
 
-namespace Vissoft.Infrastructure.Migrations
+namespace Vissoft.Infrastructure.Migrations.IdentityDatabase
 {
     [DbContext(typeof(IdentityDatabaseContext))]
-    [Migration("20231203110012_IdentityMigration")]
-    partial class IdentityMigration
+    [Migration("20231205044027_identityDb")]
+    partial class identityDb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -50,14 +50,14 @@ namespace Vissoft.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "17454cf1-6d42-4fa2-954b-1777af77c75c",
+                            Id = "82504c1b-e1dd-449f-81d3-83901fb7c226",
                             ConcurrencyStamp = "1",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         },
                         new
                         {
-                            Id = "c4c74edb-5a12-4051-bee7-351e52550dd7",
+                            Id = "3a231086-fd9d-43b9-9b22-b44921677cf0",
                             ConcurrencyStamp = "2",
                             Name = "User",
                             NormalizedName = "User"

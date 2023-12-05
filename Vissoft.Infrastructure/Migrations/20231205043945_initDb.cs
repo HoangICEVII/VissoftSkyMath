@@ -4,10 +4,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Vissoft.Infrastructure.Migrations.VissoftDatabase
+namespace Vissoft.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class VissoftMigration : Migration
+    public partial class initDb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -41,7 +41,7 @@ namespace Vissoft.Infrastructure.Migrations.VissoftDatabase
                     Description = table.Column<string>(type: "varchar(1000)", maxLength: 1000, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     CreatedDate = table.Column<DateTime>(type: "TIMESTAMP", nullable: false),
-                    LastUpdate = table.Column<DateTime>(type: "TIMESTAMP", nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "TIMESTAMP", nullable: true),
                     Status = table.Column<bool>(type: "tinyint(1)", nullable: false),
                     GradeId = table.Column<int>(type: "int", nullable: false)
                 },
@@ -92,8 +92,8 @@ namespace Vissoft.Infrastructure.Migrations.VissoftDatabase
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     VideoLink = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    CreateDate = table.Column<DateTime>(type: "TIMESTAMP", nullable: false),
-                    LastUpdate = table.Column<DateTime>(type: "TIMESTAMP", nullable: true),
+                    CreatedDate = table.Column<DateTime>(type: "TIMESTAMP", nullable: false),
+                    LastModifiedDate = table.Column<DateTime>(type: "TIMESTAMP", nullable: true),
                     Status = table.Column<bool>(type: "tinyint(1)", nullable: false),
                     ThematicId = table.Column<int>(type: "int", nullable: false)
                 },

@@ -14,7 +14,6 @@ namespace Vissoft.Controllers.ApplicationController
         {
             _courseDataService = courseDataService;
         }
-        [Authorize(Roles = "User")]
         [HttpGet("get-course-by-grade-id/{id}")]
         public async Task<ActionResult<List<CourseDto>>> GetCourseByGradeId(int id)
         {

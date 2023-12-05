@@ -2,20 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Vissoft.Infrastructure.Data;
 
 #nullable disable
 
-namespace Vissoft.Infrastructure.Migrations.VissoftDatabase
+namespace Vissoft.Infrastructure.Migrations
 {
     [DbContext(typeof(VissoftDatabaseContext))]
-    [Migration("20231203110122_VissoftMigration")]
-    partial class VissoftMigration
+    partial class VissoftDatabaseContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -39,7 +36,7 @@ namespace Vissoft.Infrastructure.Migrations.VissoftDatabase
                     b.Property<int>("GradeId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("LastUpdate")
+                    b.Property<DateTime?>("LastModifiedDate")
                         .HasColumnType("TIMESTAMP");
 
                     b.Property<string>("Name")
@@ -79,7 +76,7 @@ namespace Vissoft.Infrastructure.Migrations.VissoftDatabase
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("CreateDate")
+                    b.Property<DateTime>("CreatedDate")
                         .HasColumnType("TIMESTAMP");
 
                     b.Property<string>("Description")
@@ -87,7 +84,7 @@ namespace Vissoft.Infrastructure.Migrations.VissoftDatabase
                         .HasMaxLength(1000)
                         .HasColumnType("varchar(1000)");
 
-                    b.Property<DateTime?>("LastUpdate")
+                    b.Property<DateTime?>("LastModifiedDate")
                         .HasColumnType("TIMESTAMP");
 
                     b.Property<string>("Name")
