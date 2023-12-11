@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\VissSoft.WebApi.props" />
-</Project>

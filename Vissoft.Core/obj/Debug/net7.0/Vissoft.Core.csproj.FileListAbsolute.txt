@@ -1,0 +1,14 @@
+C:\Users\Hoang\Desktop\latest\Vissoft\Vissoft.Core\bin\Debug\net7.0\Vissoft.Core.deps.json
+C:\Users\Hoang\Desktop\latest\Vissoft\Vissoft.Core\bin\Debug\net7.0\Vissoft.Core.runtimeconfig.json
+C:\Users\Hoang\Desktop\latest\Vissoft\Vissoft.Core\bin\Debug\net7.0\Vissoft.Core.dll
+C:\Users\Hoang\Desktop\latest\Vissoft\Vissoft.Core\bin\Debug\net7.0\Vissoft.Core.pdb
+C:\Users\Hoang\Desktop\latest\Vissoft\Vissoft.Core\obj\Debug\net7.0\Vissoft.Core.csproj.AssemblyReference.cache
+C:\Users\Hoang\Desktop\latest\Vissoft\Vissoft.Core\obj\Debug\net7.0\Vissoft.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hoang\Desktop\latest\Vissoft\Vissoft.Core\obj\Debug\net7.0\Vissoft.Core.AssemblyInfoInputs.cache
+C:\Users\Hoang\Desktop\latest\Vissoft\Vissoft.Core\obj\Debug\net7.0\Vissoft.Core.AssemblyInfo.cs
+C:\Users\Hoang\Desktop\latest\Vissoft\Vissoft.Core\obj\Debug\net7.0\Vissoft.Core.csproj.CoreCompileInputs.cache
+C:\Users\Hoang\Desktop\latest\Vissoft\Vissoft.Core\obj\Debug\net7.0\Vissoft.Core.dll
+C:\Users\Hoang\Desktop\latest\Vissoft\Vissoft.Core\obj\Debug\net7.0\refint\Vissoft.Core.dll
+C:\Users\Hoang\Desktop\latest\Vissoft\Vissoft.Core\obj\Debug\net7.0\Vissoft.Core.pdb
+C:\Users\Hoang\Desktop\latest\Vissoft\Vissoft.Core\obj\Debug\net7.0\Vissoft.Core.genruntimeconfig.cache
+C:\Users\Hoang\Desktop\latest\Vissoft\Vissoft.Core\obj\Debug\net7.0\ref\Vissoft.Core.dll
