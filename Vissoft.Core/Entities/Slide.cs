@@ -9,7 +9,7 @@ namespace Vissoft.Core.Entities
     public class Slide
     {
         public int Id { get; set; }
-        public string ImageLink { get; set; }
-        public string Slogan { get; set; }
+        public string ImageLink { get; set; } = string.Empty;
+        public string Slogan { get; set; } = string.Empty;
     }
 }

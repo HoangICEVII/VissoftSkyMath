@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hoang\\Desktop\\latest\\Vissoft\\Vissoft.WebApi\\Vissoft.WebApi.csproj": {}
+    "H:\\Work\\HoangVissoft\\Vissoft.WebApi\\Vissoft.WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hoang\\Desktop\\latest\\Vissoft\\Vissoft.Application\\Vissoft.Application.csproj": {
+    "H:\\Work\\HoangVissoft\\Vissoft.Application\\Vissoft.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hoang\\Desktop\\latest\\Vissoft\\Vissoft.Application\\Vissoft.Application.csproj",
+        "projectUniqueName": "H:\\Work\\HoangVissoft\\Vissoft.Application\\Vissoft.Application.csproj",
         "projectName": "Vissoft.Application",
-        "projectPath": "C:\\Users\\Hoang\\Desktop\\latest\\Vissoft\\Vissoft.Application\\Vissoft.Application.csproj",
-        "packagesPath": "C:\\Users\\Hoang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hoang\\Desktop\\latest\\Vissoft\\Vissoft.Application\\obj\\",
+        "projectPath": "H:\\Work\\HoangVissoft\\Vissoft.Application\\Vissoft.Application.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "H:\\Work\\HoangVissoft\\Vissoft.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Hoang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,8 +32,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Hoang\\Desktop\\latest\\Vissoft\\Vissoft.Core\\Vissoft.Core.csproj": {
-                "projectPath": "C:\\Users\\Hoang\\Desktop\\latest\\Vissoft\\Vissoft.Core\\Vissoft.Core.csproj"
+              "H:\\Work\\HoangVissoft\\Vissoft.Core\\Vissoft.Core.csproj": {
+                "projectPath": "H:\\Work\\HoangVissoft\\Vissoft.Core\\Vissoft.Core.csproj"
               }
             }
           }
@@ -91,20 +91,20 @@
         }
       }
     },
-    "C:\\Users\\Hoang\\Desktop\\latest\\Vissoft\\Vissoft.Core\\Vissoft.Core.csproj": {
+    "H:\\Work\\HoangVissoft\\Vissoft.Core\\Vissoft.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hoang\\Desktop\\latest\\Vissoft\\Vissoft.Core\\Vissoft.Core.csproj",
+        "projectUniqueName": "H:\\Work\\HoangVissoft\\Vissoft.Core\\Vissoft.Core.csproj",
         "projectName": "Vissoft.Core",
-        "projectPath": "C:\\Users\\Hoang\\Desktop\\latest\\Vissoft\\Vissoft.Core\\Vissoft.Core.csproj",
-        "packagesPath": "C:\\Users\\Hoang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hoang\\Desktop\\latest\\Vissoft\\Vissoft.Core\\obj\\",
+        "projectPath": "H:\\Work\\HoangVissoft\\Vissoft.Core\\Vissoft.Core.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "H:\\Work\\HoangVissoft\\Vissoft.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Hoang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -174,20 +174,20 @@
         }
       }
     },
-    "C:\\Users\\Hoang\\Desktop\\latest\\Vissoft\\Vissoft.Infrastructure\\Vissoft.Infrastructure.csproj": {
+    "H:\\Work\\HoangVissoft\\Vissoft.Infrastructure\\Vissoft.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hoang\\Desktop\\latest\\Vissoft\\Vissoft.Infrastructure\\Vissoft.Infrastructure.csproj",
+        "projectUniqueName": "H:\\Work\\HoangVissoft\\Vissoft.Infrastructure\\Vissoft.Infrastructure.csproj",
         "projectName": "Vissoft.Infrastructure",
-        "projectPath": "C:\\Users\\Hoang\\Desktop\\latest\\Vissoft\\Vissoft.Infrastructure\\Vissoft.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Hoang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hoang\\Desktop\\latest\\Vissoft\\Vissoft.Infrastructure\\obj\\",
+        "projectPath": "H:\\Work\\HoangVissoft\\Vissoft.Infrastructure\\Vissoft.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "H:\\Work\\HoangVissoft\\Vissoft.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Hoang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -202,8 +202,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Hoang\\Desktop\\latest\\Vissoft\\Vissoft.Core\\Vissoft.Core.csproj": {
-                "projectPath": "C:\\Users\\Hoang\\Desktop\\latest\\Vissoft\\Vissoft.Core\\Vissoft.Core.csproj"
+              "H:\\Work\\HoangVissoft\\Vissoft.Core\\Vissoft.Core.csproj": {
+                "projectPath": "H:\\Work\\HoangVissoft\\Vissoft.Core\\Vissoft.Core.csproj"
               }
             }
           }
@@ -261,20 +261,20 @@
         }
       }
     },
-    "C:\\Users\\Hoang\\Desktop\\latest\\Vissoft\\Vissoft.WebApi\\Vissoft.WebApi.csproj": {
+    "H:\\Work\\HoangVissoft\\Vissoft.WebApi\\Vissoft.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hoang\\Desktop\\latest\\Vissoft\\Vissoft.WebApi\\Vissoft.WebApi.csproj",
+        "projectUniqueName": "H:\\Work\\HoangVissoft\\Vissoft.WebApi\\Vissoft.WebApi.csproj",
         "projectName": "Vissoft.WebApi",
-        "projectPath": "C:\\Users\\Hoang\\Desktop\\latest\\Vissoft\\Vissoft.WebApi\\Vissoft.WebApi.csproj",
-        "packagesPath": "C:\\Users\\Hoang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hoang\\Desktop\\latest\\Vissoft\\Vissoft.WebApi\\obj\\",
+        "projectPath": "H:\\Work\\HoangVissoft\\Vissoft.WebApi\\Vissoft.WebApi.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "H:\\Work\\HoangVissoft\\Vissoft.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Hoang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -289,14 +289,14 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Hoang\\Desktop\\latest\\Vissoft\\Vissoft.Application\\Vissoft.Application.csproj": {
-                "projectPath": "C:\\Users\\Hoang\\Desktop\\latest\\Vissoft\\Vissoft.Application\\Vissoft.Application.csproj"
+              "H:\\Work\\HoangVissoft\\Vissoft.Application\\Vissoft.Application.csproj": {
+                "projectPath": "H:\\Work\\HoangVissoft\\Vissoft.Application\\Vissoft.Application.csproj"
               },
-              "C:\\Users\\Hoang\\Desktop\\latest\\Vissoft\\Vissoft.Core\\Vissoft.Core.csproj": {
-                "projectPath": "C:\\Users\\Hoang\\Desktop\\latest\\Vissoft\\Vissoft.Core\\Vissoft.Core.csproj"
+              "H:\\Work\\HoangVissoft\\Vissoft.Core\\Vissoft.Core.csproj": {
+                "projectPath": "H:\\Work\\HoangVissoft\\Vissoft.Core\\Vissoft.Core.csproj"
               },
-              "C:\\Users\\Hoang\\Desktop\\latest\\Vissoft\\Vissoft.Infrastructure\\Vissoft.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Hoang\\Desktop\\latest\\Vissoft\\Vissoft.Infrastructure\\Vissoft.Infrastructure.csproj"
+              "H:\\Work\\HoangVissoft\\Vissoft.Infrastructure\\Vissoft.Infrastructure.csproj": {
+                "projectPath": "H:\\Work\\HoangVissoft\\Vissoft.Infrastructure\\Vissoft.Infrastructure.csproj"
               }
             }
           }

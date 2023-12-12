@@ -14,10 +14,16 @@ namespace Vissoft.Infrastructure.Data
 {
     public class VissoftDatabaseContext : DbContext
     {
-        public DbSet<Grade> Grades { get; set; }
         public DbSet<Course> Courses { get; set; }
-        public DbSet<Thematic> Thematics { get; set; }
+        public DbSet<CourseTeacher> CourseTeachers { get; set; }
+        public DbSet<Grade> Grades { get; set; }
+        public DbSet<Introduce> Introduces { get; set; }
         public DbSet<Lesson> Lessons { get; set; }
+        public DbSet<NewsAndEventAttribute> NewsAndEventAttributes { get; set; }
+        public DbSet<NewsAndEvent> NewsAndEvents { get; set; }
+        public DbSet<Slide> Slides { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
+        public DbSet<Thematic> Thematics { get; set; }
         public VissoftDatabaseContext(DbContextOptions<VissoftDatabaseContext> options) : base(options)
         {
             

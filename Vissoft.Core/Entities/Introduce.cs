@@ -9,7 +9,8 @@ namespace Vissoft.Core.Entities
     public class Introduce
     {
         public int Id { get; set; }
-        public string Title { get; set; }
-        public string Content { get; set; }
+        public string Title { get; set; } = string.Empty;
+        public string Content { get; set; } = string.Empty;
+        public bool Status { get; set; }    
     }
 }

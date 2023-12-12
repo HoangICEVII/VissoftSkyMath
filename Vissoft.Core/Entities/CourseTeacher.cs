@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace Vissoft.Core.Entities
 {
-    public class Thematic
+    public class CourseTeacher
     {
-        public int Id { get; set; }
-        public string Name { get; set; } = string.Empty;
-        public bool Status { get; set; }
         public int CourseId { get; set; }
+        public int TeacherId { get; set; }
         public Course Course { get; set; } = null!;
-        public ICollection<Lesson> Lessons { get; set; } = null!;
+        public Teacher Teachers { get; set; } = null!;
     }
 }

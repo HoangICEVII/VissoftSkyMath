@@ -28,7 +28,7 @@ namespace Vissoft.Infrastructure.Repositories
                     UserName = userInfo.UserName,
                     Email = userInfo.Email,
                     Role = (await _userManager.GetRolesAsync(userInfo)).FirstOrDefault()
-            };
+                };
             }
             else
             {

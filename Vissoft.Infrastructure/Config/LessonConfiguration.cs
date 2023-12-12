@@ -20,6 +20,7 @@ namespace Vissoft.Infrastructure.Config
             builder.Property(l => l.Description).IsRequired().HasMaxLength(1000);
             builder.Property(l => l.CreatedDate).HasColumnType("TIMESTAMP");
             builder.Property(l => l.LastModifiedDate).HasColumnType("TIMESTAMP");
+            builder.Property(l => l.Status).HasDefaultValue(true);
         }
     }
 }

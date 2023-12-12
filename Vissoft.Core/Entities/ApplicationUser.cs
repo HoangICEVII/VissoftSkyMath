@@ -9,6 +9,6 @@ namespace Vissoft.Core.Entities
 {
     public class ApplicationUser : IdentityUser
     {
-        public string FullName;
+        public string? FullName;
     }
 }

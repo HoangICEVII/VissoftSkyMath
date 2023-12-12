@@ -9,9 +9,10 @@ namespace Vissoft.Core.Entities
     public class Teacher
     {
         public int Id { get; set; }
-        public string Name { get; set; } = null!;
-        public string Avatar { get; set; } = null!;
-        public string WorkPlace { get; set; } = null!;
-        public string Description { get; set; } = null!;
+        public string Name { get; set; } = string.Empty;
+        public string Avatar { get; set; } = string.Empty;
+        public string WorkPlace { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+        public virtual ICollection<CourseTeacher> CourseTeachers { get; set; } = null!;
     }
 }

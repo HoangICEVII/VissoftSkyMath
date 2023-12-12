@@ -17,6 +17,7 @@ namespace Vissoft.Infrastructure.Config
             builder.HasKey(t => t.Id);
             builder.Property(t => t.Id).ValueGeneratedOnAdd();
             builder.Property(t => t.Name).IsRequired().HasMaxLength(100);
+            builder.Property(t => t.Status).HasDefaultValue(true);
             builder.HasMany(t => t.Lessons).WithOne(l => l.Thematic).HasForeignKey(l => l.ThematicId);
         }
     }
