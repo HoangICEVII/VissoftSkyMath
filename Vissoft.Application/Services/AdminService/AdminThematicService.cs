@@ -4,25 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Vissoft.Core.DTOs;
+using Vissoft.Core.Interfaces.IRepository;
 using Vissoft.Core.Interfaces.IService.IAdminService;
 
 namespace Vissoft.Application.Services.AdminService
 {
-    internal class AdminThematicService : IAdminThematicService
+    public class AdminThematicService : IAdminThematicService
     {
-        public Task CreateThematic(ThematicCreateDto thematicCreateDto)
+        private readonly IThematicRepository _thematicRepository;
+        public AdminThematicService(IThematicRepository thematicRepository)
         {
-            throw new NotImplementedException();
+            _thematicRepository = thematicRepository;
+        }
+        public async Task CreateThematic(ThematicCreateDto thematicCreateDto)
+        {
+            await _thematicRepository.CreateThematic(thematicCreateDto);
         }
 
-        public Task DeleteThematic(int id)
+        public async Task DeleteThematic(int id)
         {
-            throw new NotImplementedException();
+            await _thematicRepository.DeleteThematic(id);
         }
 
-        public Task UpdateThematic(int id, ThematicUpdateDto thematicUpdateDto)
+        public async Task UpdateThematic(int id, ThematicUpdateDto thematicUpdateDto)
         {
-            throw new NotImplementedException();
+            await _thematicRepository.UpdateThematic(id, thematicUpdateDto);
         }
     }
 }

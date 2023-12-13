@@ -4,25 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Vissoft.Core.DTOs;
+using Vissoft.Core.Interfaces.IRepository;
 using Vissoft.Core.Interfaces.IService.IAdminService;
 
 namespace Vissoft.Application.Services.AdminService
 {
     public class AdminGradeService : IAdminGradeService
     {
-        public Task CreateGrade(GradeCreateDto gradeCreateDto)
+        private readonly IGradeRepository _gradeRepository;
+        public AdminGradeService(IGradeRepository gradeRepository)
         {
-            throw new NotImplementedException();
+            _gradeRepository = gradeRepository;
+        }
+        public async Task CreateGrade(GradeCreateDto gradeCreateDto)
+        {
+            await _gradeRepository.CreateGrade(gradeCreateDto);
         }
 
-        public Task DeleteGrade(int gradeId)
+        public async Task DeleteGrade(int id)
         {
-            throw new NotImplementedException();
+            await _gradeRepository.DeleteGrade(id);
         }
 
-        public Task<List<GradeDto>> GetAllGrade()
+        public async Task<List<GradeDto>> GetAllGrade()
         {
-            throw new NotImplementedException();
+            return await _gradeRepository.GetAllGrade();
         }
     }
 }

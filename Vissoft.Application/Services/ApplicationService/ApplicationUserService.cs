@@ -23,7 +23,7 @@ namespace Vissoft.Application.Services.ApplicationService
 
         public async Task<UserAuthenDto> LoginViaGoogle(UserLoginViaGoogleDto userLoginViaGoogleDto)
         {
-            throw new NotImplementedException();
+            return await _userRepository.LoginViaGoogle(userLoginViaGoogleDto);
         }
 
         public async Task Register(UserRegisterDto userRegisterDto)

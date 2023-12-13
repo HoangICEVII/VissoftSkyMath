@@ -40,13 +40,12 @@ namespace Vissoft.Infrastructure.Repositories
         public async Task UpdateCourse(int id, CourseUpdateDto courseUpdateDto)
         {
             var data = await _dbContext.Courses.Where(c => c.Id == id).FirstOrDefaultAsync();
-            Course course = _mapper.Map<Course>(data);
-            if (course != null)
+            if (data != null)
             {
-                course.Name =courseUpdateDto.Name;
-                course.Description =courseUpdateDto.Description;
-                course.Status = courseUpdateDto.Status;
-                course.GradeId = courseUpdateDto.GradeId;
+                data.Name =courseUpdateDto.Name;
+                data.Description =courseUpdateDto.Description;
+                data.Status = courseUpdateDto.Status;
+                data.GradeId = courseUpdateDto.GradeId;
             }
             else
             {

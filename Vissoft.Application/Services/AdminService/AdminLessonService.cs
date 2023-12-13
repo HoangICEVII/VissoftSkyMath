@@ -4,25 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Vissoft.Core.DTOs;
+using Vissoft.Core.Interfaces.IRepository;
 using Vissoft.Core.Interfaces.IService.IAdminService;
 
 namespace Vissoft.Application.Services.AdminService
 {
     public class AdminLessonService : IAdminLessonService
     {
-        public Task CreateLesson(LessonCreateDto lessonCreateDto)
+        private readonly ILessonRepository _lessonRepository;
+        public AdminLessonService(ILessonRepository lessonRepository)
         {
-            throw new NotImplementedException();
+            _lessonRepository = lessonRepository;
+        }
+        public async Task CreateLesson(LessonCreateDto lessonCreateDto)
+        {
+            await _lessonRepository.CreateLesson(lessonCreateDto);
         }
 
-        public Task DeleteLesson(int id)
+        public async Task DeleteLesson(int id)
         {
-            throw new NotImplementedException();
+            await _lessonRepository.DeleteLesson(id);
         }
 
-        public Task UpdateLesson(int id, LessonUpdateDto lessonUpdateDto)
+        public async Task UpdateLesson(int id, LessonUpdateDto lessonUpdateDto)
         {
-            throw new NotImplementedException();
+            await _lessonRepository.UpdateLesson(id, lessonUpdateDto);
         }
     }
 }
