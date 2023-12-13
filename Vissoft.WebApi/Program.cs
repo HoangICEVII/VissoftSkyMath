@@ -113,29 +113,29 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI(option => option.SwaggerEndpoint("/swagger/v1/swagger.json", "VissoftJWToken v1"));
 
-//app.UseStaticFiles(new StaticFileOptions
-//{
-//    FileProvider = new PhysicalFileProvider("/app/Images/Course"),
-//    RequestPath = "/resource/image/course"
-//});
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider("/app/Images/Course"),
+    RequestPath = "/resource/image/course"
+});
 
-//app.UseStaticFiles(new StaticFileOptions
-//{
-//    FileProvider = new PhysicalFileProvider("/app/Images/NewAndEvent"),
-//    RequestPath = "/resource/image/news"
-//});
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider("/app/Images/NewAndEvent"),
+    RequestPath = "/resource/image/news"
+});
 
-//app.UseStaticFiles(new StaticFileOptions
-//{
-//    FileProvider = new PhysicalFileProvider("/app/Images/Slide"),
-//    RequestPath = "/resource/image/slide"
-//});
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider("/app/Images/Slide"),
+    RequestPath = "/resource/image/slide"
+});
 
-//app.UseStaticFiles(new StaticFileOptions
-//{
-//    FileProvider = new PhysicalFileProvider("/app/Images/Teacher"),
-//    RequestPath = "/resource/image/teacher"
-//});
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider("/app/Images/Teacher"),
+    RequestPath = "/resource/image/teacher"
+});
 
 app.UseRouting();
 app.UseStaticFiles();

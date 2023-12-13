@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nguye\\OneDrive\\Desktop\\VissoftSkyMath\\Vissoft.Application\\Vissoft.Application.csproj": {}
+    "C:\\Users\\Hoang\\Desktop\\VissoftSkyMath\\Vissoft.Application\\Vissoft.Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nguye\\OneDrive\\Desktop\\VissoftSkyMath\\Vissoft.Application\\Vissoft.Application.csproj": {
+    "C:\\Users\\Hoang\\Desktop\\VissoftSkyMath\\Vissoft.Application\\Vissoft.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nguye\\OneDrive\\Desktop\\VissoftSkyMath\\Vissoft.Application\\Vissoft.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Hoang\\Desktop\\VissoftSkyMath\\Vissoft.Application\\Vissoft.Application.csproj",
         "projectName": "Vissoft.Application",
-        "projectPath": "C:\\Users\\nguye\\OneDrive\\Desktop\\VissoftSkyMath\\Vissoft.Application\\Vissoft.Application.csproj",
-        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nguye\\OneDrive\\Desktop\\VissoftSkyMath\\Vissoft.Application\\obj\\",
+        "projectPath": "C:\\Users\\Hoang\\Desktop\\VissoftSkyMath\\Vissoft.Application\\Vissoft.Application.csproj",
+        "packagesPath": "C:\\Users\\Hoang\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hoang\\Desktop\\VissoftSkyMath\\Vissoft.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hoang\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\nguye\\OneDrive\\Desktop\\VissoftSkyMath\\Vissoft.Core\\Vissoft.Core.csproj": {
-                "projectPath": "C:\\Users\\nguye\\OneDrive\\Desktop\\VissoftSkyMath\\Vissoft.Core\\Vissoft.Core.csproj"
+              "C:\\Users\\Hoang\\Desktop\\VissoftSkyMath\\Vissoft.Core\\Vissoft.Core.csproj": {
+                "projectPath": "C:\\Users\\Hoang\\Desktop\\VissoftSkyMath\\Vissoft.Core\\Vissoft.Core.csproj"
               }
             }
           }
@@ -87,17 +87,17 @@
         }
       }
     },
-    "C:\\Users\\nguye\\OneDrive\\Desktop\\VissoftSkyMath\\Vissoft.Core\\Vissoft.Core.csproj": {
+    "C:\\Users\\Hoang\\Desktop\\VissoftSkyMath\\Vissoft.Core\\Vissoft.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nguye\\OneDrive\\Desktop\\VissoftSkyMath\\Vissoft.Core\\Vissoft.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Hoang\\Desktop\\VissoftSkyMath\\Vissoft.Core\\Vissoft.Core.csproj",
         "projectName": "Vissoft.Core",
-        "projectPath": "C:\\Users\\nguye\\OneDrive\\Desktop\\VissoftSkyMath\\Vissoft.Core\\Vissoft.Core.csproj",
-        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nguye\\OneDrive\\Desktop\\VissoftSkyMath\\Vissoft.Core\\obj\\",
+        "projectPath": "C:\\Users\\Hoang\\Desktop\\VissoftSkyMath\\Vissoft.Core\\Vissoft.Core.csproj",
+        "packagesPath": "C:\\Users\\Hoang\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hoang\\Desktop\\VissoftSkyMath\\Vissoft.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hoang\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -1,0 +1,30 @@
+version: '3.4'
+
+networks:
+  backend:
+
+services:
+  vissoftdb:
+    container_name: vissoft-db
+    image: mysql:8.0.35
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+    ports:
+      - 8002:3306
+    networks:
+      - backend
+  vissoft.webapi:
+    container_name: vissoft-api
+    image: ${DOCKER_REGISTRY-}vissoftwebapi
+    build:
+      context: .
+      dockerfile: Vissoft.WebApi/Dockerfile
+    networks:
+      - backend
+    ports:
+      - 2002:80
+    restart: always
+    environment:
+      - DB_HOST=vissoftdb
+      - DB_NAME=vissoft
+      - DB_ROOT_PASSWORD=123456
