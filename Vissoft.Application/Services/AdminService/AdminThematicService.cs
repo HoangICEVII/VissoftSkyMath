@@ -4,28 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Vissoft.Core.DTOs;
-using Vissoft.Core.Interfaces.IService.IApplicationService;
+using Vissoft.Core.Interfaces.IService.IAdminService;
 
-namespace Vissoft.Application.Services
+namespace Vissoft.Application.Services.AdminService
 {
-    internal class ThematicService : IThematicService
+    internal class AdminThematicService : IAdminThematicService
     {
         public Task CreateThematic(ThematicCreateDto thematicCreateDto)
         {
             throw new NotImplementedException();
         }
 
-        public Task DeleteThematic(int thematicId)
+        public Task DeleteThematic(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<List<ThematicDto>> GetAllThematic()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<List<ThematicDto>> GetAllThematicByCourseId(int courseId)
+        public Task UpdateThematic(int id, ThematicUpdateDto thematicUpdateDto)
         {
             throw new NotImplementedException();
         }

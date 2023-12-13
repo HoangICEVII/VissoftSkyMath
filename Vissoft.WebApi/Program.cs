@@ -5,7 +5,6 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 using Vissoft;
-using Vissoft.Application.Services;
 using Vissoft.Core.Entities;
 using Vissoft.Core.Interfaces.IRepository;
 using Vissoft.WebApi.Helpers;
@@ -15,6 +14,7 @@ using Vissoft.Infrastructure.Repositories;
 using Vissoft.WebApi;
 using Microsoft.Extensions.FileProviders;
 using Vissoft.Core.Interfaces.IService.IApplicationService;
+using Vissoft.Application.Services.ApplicationService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -78,8 +78,8 @@ builder.Services.AddAuthentication(options =>
 });
 
 //Service Dependency Injection
-builder.Services.AddScoped<ICourseService, CourseDataService>();
-builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IApplicationCourseService, ApplicationCourseService>();
+builder.Services.AddScoped<IApplicationUserService, ApplicationUserService>();
 
 //Repository Dependency Injection
 builder.Services.AddScoped<ICourseRepository, CourseRepository>();

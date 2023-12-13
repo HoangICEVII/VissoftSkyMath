@@ -9,9 +9,9 @@ namespace Vissoft.Core.Interfaces.IRepository
 {
     public interface IThematicRepository
     {
-        Task<List<ThematicDto>> GetThematic();
-        Task AddNewThematic(ThematicCreateDto thematicCreateDto);
-        Task UpdateThematic(ThematicUpdateDto thematicUpdateDto);
-        Task DeleteThematic(int thematicId);
+        Task<List<ThematicDto>> GetThematicByCourseId(int courseId);
+        Task CreateThematic(ThematicCreateDto thematicCreateDto);
+        Task UpdateThematic(int id, ThematicUpdateDto thematicUpdateDto);
+        Task DeleteThematic(int id);
     }
 }

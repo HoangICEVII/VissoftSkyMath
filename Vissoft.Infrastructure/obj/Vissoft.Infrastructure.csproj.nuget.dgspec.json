@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "H:\\Work\\HoangVissoft\\Vissoft.Infrastructure\\Vissoft.Infrastructure.csproj": {}
+    "C:\\Users\\nguye\\OneDrive\\Desktop\\VissoftSkyMath\\Vissoft.Infrastructure\\Vissoft.Infrastructure.csproj": {}
   },
   "projects": {
-    "H:\\Work\\HoangVissoft\\Vissoft.Core\\Vissoft.Core.csproj": {
+    "C:\\Users\\nguye\\OneDrive\\Desktop\\VissoftSkyMath\\Vissoft.Core\\Vissoft.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Work\\HoangVissoft\\Vissoft.Core\\Vissoft.Core.csproj",
+        "projectUniqueName": "C:\\Users\\nguye\\OneDrive\\Desktop\\VissoftSkyMath\\Vissoft.Core\\Vissoft.Core.csproj",
         "projectName": "Vissoft.Core",
-        "projectPath": "H:\\Work\\HoangVissoft\\Vissoft.Core\\Vissoft.Core.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "H:\\Work\\HoangVissoft\\Vissoft.Core\\obj\\",
+        "projectPath": "C:\\Users\\nguye\\OneDrive\\Desktop\\VissoftSkyMath\\Vissoft.Core\\Vissoft.Core.csproj",
+        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nguye\\OneDrive\\Desktop\\VissoftSkyMath\\Vissoft.Core\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -87,21 +83,17 @@
         }
       }
     },
-    "H:\\Work\\HoangVissoft\\Vissoft.Infrastructure\\Vissoft.Infrastructure.csproj": {
+    "C:\\Users\\nguye\\OneDrive\\Desktop\\VissoftSkyMath\\Vissoft.Infrastructure\\Vissoft.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Work\\HoangVissoft\\Vissoft.Infrastructure\\Vissoft.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\nguye\\OneDrive\\Desktop\\VissoftSkyMath\\Vissoft.Infrastructure\\Vissoft.Infrastructure.csproj",
         "projectName": "Vissoft.Infrastructure",
-        "projectPath": "H:\\Work\\HoangVissoft\\Vissoft.Infrastructure\\Vissoft.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "H:\\Work\\HoangVissoft\\Vissoft.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\nguye\\OneDrive\\Desktop\\VissoftSkyMath\\Vissoft.Infrastructure\\Vissoft.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nguye\\OneDrive\\Desktop\\VissoftSkyMath\\Vissoft.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -115,8 +107,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "H:\\Work\\HoangVissoft\\Vissoft.Core\\Vissoft.Core.csproj": {
-                "projectPath": "H:\\Work\\HoangVissoft\\Vissoft.Core\\Vissoft.Core.csproj"
+              "C:\\Users\\nguye\\OneDrive\\Desktop\\VissoftSkyMath\\Vissoft.Core\\Vissoft.Core.csproj": {
+                "projectPath": "C:\\Users\\nguye\\OneDrive\\Desktop\\VissoftSkyMath\\Vissoft.Core\\Vissoft.Core.csproj"
               }
             }
           }

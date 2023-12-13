@@ -7,12 +7,13 @@ using Vissoft.Core.DTOs.User;
 using Vissoft.Core.Interfaces.IRepository;
 using Vissoft.Core.Interfaces.IService.IApplicationService;
 
-namespace Vissoft.Application.Services
+namespace Vissoft.Application.Services.ApplicationService
 {
-    public class UserService : IUserService
+    public class ApplicationUserService : IApplicationUserService
     {
         private readonly IUserRepository _userRepository;
-        public UserService(IUserRepository userRepository) {
+        public ApplicationUserService(IUserRepository userRepository)
+        {
             _userRepository = userRepository;
         }
         public async Task<UserAuthenDto> LoginViaForm(UserLoginViaFormDto userlogin)

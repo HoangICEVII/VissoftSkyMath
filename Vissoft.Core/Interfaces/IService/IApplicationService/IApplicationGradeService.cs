@@ -7,10 +7,8 @@ using Vissoft.Core.DTOs;
 
 namespace Vissoft.Core.Interfaces.IService.IApplicationService
 {
-    public interface IGradeService
+    public interface IApplicationGradeService
     {
         Task<List<GradeDto>> GetAllGrade();
-        Task CreateGrade(GradeCreateDto gradeCreateDto);
-        Task DeleteGrade(int id);
     }
 }

@@ -12,11 +12,11 @@ namespace Vissoft.WebApi.Controllers.ApplicationController
 {
     [Route("api/user")]
     [ApiController]
-    public class UserController : ControllerBase
+    public class ApplicationUserController : ControllerBase
     {
-        private readonly IUserService _userService;
+        private readonly IApplicationUserService _userService;
         private readonly IConfiguration _configuration;
-        public UserController(IUserService userService, IConfiguration configuration)
+        public ApplicationUserController(IApplicationUserService userService, IConfiguration configuration)
         {
             _userService = userService;
             _configuration = configuration;

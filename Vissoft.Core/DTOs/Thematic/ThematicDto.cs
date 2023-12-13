@@ -10,6 +10,7 @@ namespace Vissoft.Core.DTOs
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public List<LessonDto>? LessonDtos { get; set; }
         public bool Status { get; set; }
         public int Course_id { get; set; }
     }

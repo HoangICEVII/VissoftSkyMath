@@ -1,18 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Vissoft.Application.Services;
 using Vissoft.Core.DTOs;
-using Vissoft.Core.DTOs.Thematic;
 using Vissoft.Core.Interfaces.IService.IApplicationService;
 
 namespace Vissoft.WebApi.Controllers.ApplicationController
 {
     [Route("api/grades")]
     [ApiController]
-    public class GradeController : ControllerBase
+    public class ApplicationGradeController : ControllerBase
     {
-        private readonly IGradeService _gradeService;
-        private readonly ICourseService _courseService;
-        public GradeController(IGradeService gradeService, ICourseService courseService) {
+        private readonly IApplicationGradeService _gradeService;
+        private readonly IApplicationCourseService _courseService;
+        public ApplicationGradeController(IApplicationGradeService gradeService, IApplicationCourseService courseService) {
             _gradeService = gradeService;
             _courseService = courseService;
         }

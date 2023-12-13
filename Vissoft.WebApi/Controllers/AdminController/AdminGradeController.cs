@@ -1,27 +1,33 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Vissoft.Application.Services;
 using Vissoft.Core.DTOs;
+using Vissoft.Core.Interfaces.IService.IAdminService;
 using Vissoft.Core.Interfaces.IService.IApplicationService;
 
 namespace Vissoft.WebApi.Controllers.AdminController
 {
     [Route("api/admin/grades")]
     [ApiController]
+    [Authorize(Roles = "Admin")]
     public class AdminGradeController : ControllerBase
     {
-        private readonly IGradeService _gradeService;
-        public AdminGradeController(IGradeService gradeService)
+        private readonly IAdminGradeService _adminGradeService;
+        public AdminGradeController(IAdminGradeService adminGradeService)
         {
-            _gradeService = gradeService;
+            _adminGradeService = adminGradeService;
         }
-        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> GetAllGrade()
         {
-            return Ok();
+            try
+            {
+                var responseData = await _adminGradeService.GetAllGrade();
+                return Ok(responseData);
+            }catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
-        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> CreateGrade([FromForm] GradeCreateDto gradeCreateDto)
         {
@@ -29,7 +35,7 @@ namespace Vissoft.WebApi.Controllers.AdminController
             {
                 if (!ModelState.IsValid)
                     return BadRequest("Du lieu khong hop le");
-                await _gradeService.CreateGrade(gradeCreateDto);
+                await _adminGradeService.CreateGrade(gradeCreateDto);
                 return Ok();
             }
             catch (Exception ex)
@@ -37,13 +43,12 @@ namespace Vissoft.WebApi.Controllers.AdminController
                 return BadRequest(ex.ToString());
             }
         }
-        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCourse(int id)
         {
             try
             {
-                await _gradeService.DeleteGrade(id);
+                await _adminGradeService.DeleteGrade(id);
                 return Ok();
             }
             catch (Exception ex)

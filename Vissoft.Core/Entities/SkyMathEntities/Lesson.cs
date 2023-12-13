@@ -16,7 +16,7 @@ namespace Vissoft.Core.Entities
         public DateTime CreatedDate { get; set; }
         public DateTime? LastModifiedDate { get; set; }
         public int? CreatedBy { get; set; }
-        public int? UpdatedBy {  get; set; }
+        public int? UpdatedBy { get; set; }
         public bool Status { get; set; }
         public int ThematicId { get; set; }
         public Thematic Thematic { get; set; } = null!;

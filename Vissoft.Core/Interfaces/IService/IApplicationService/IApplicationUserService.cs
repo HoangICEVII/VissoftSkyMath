@@ -7,7 +7,7 @@ using Vissoft.Core.DTOs.User;
 
 namespace Vissoft.Core.Interfaces.IService.IApplicationService
 {
-    public interface IUserService
+    public interface IApplicationUserService
     {
         public Task<UserAuthenDto> LoginViaForm(UserLoginViaFormDto userlogin);
         public Task<UserAuthenDto> LoginViaGoogle(UserLoginViaGoogleDto userLoginViaGoogleDto);

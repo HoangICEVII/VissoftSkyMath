@@ -9,8 +9,8 @@ namespace Vissoft.Core.Interfaces.IRepository
 {
     public interface IGradeRepository
     {
-        Task<List<GradeDto>> GetGrade();
+        Task<List<GradeDto>> GetAllGrade();
         Task CreateGrade(GradeCreateDto gradeCreateDto);
-        Task DeleteGrade(int gradeId);
+        Task DeleteGrade(int id);
     }
 }

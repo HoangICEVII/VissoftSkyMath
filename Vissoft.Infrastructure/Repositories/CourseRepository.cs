@@ -37,9 +37,9 @@ namespace Vissoft.Infrastructure.Repositories
             await _dbContext.Courses.AddAsync(data);
             await _dbContext.SaveChangesAsync();
         }
-        public async Task UpdateCourse(CourseUpdateDto courseUpdateDto)
+        public async Task UpdateCourse(int id, CourseUpdateDto courseUpdateDto)
         {
-            var data = await _dbContext.Courses.Where(c => c.Id == courseUpdateDto.Id).FirstOrDefaultAsync();
+            var data = await _dbContext.Courses.Where(c => c.Id == id).FirstOrDefaultAsync();
             Course course = _mapper.Map<Course>(data);
             if (course != null)
             {
@@ -54,9 +54,9 @@ namespace Vissoft.Infrastructure.Repositories
             }
             await _dbContext.SaveChangesAsync();
         }
-        public async Task DeleteCourse(int couseId)
+        public async Task DeleteCourse(int id)
         {
-            var data = await _dbContext.Courses.FindAsync(couseId);
+            var data = await _dbContext.Courses.FindAsync(id);
             if(data != null)
             {
                 _dbContext.Courses.Remove(data);

@@ -21,7 +21,7 @@ namespace Vissoft.Infrastructure.Repositories
             _dbContext = dbContext;
             _mapper = mapper;
         }
-        public async Task<List<GradeDto>> GetGrade()
+        public async Task<List<GradeDto>> GetAllGrade()
         {
             var data = await _dbContext.Grades.ToListAsync();
             return _mapper.Map<List<GradeDto>>(data);
@@ -33,9 +33,9 @@ namespace Vissoft.Infrastructure.Repositories
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task DeleteGrade(int gradeId)
+        public async Task DeleteGrade(int id)
         {
-            var data = await _dbContext.Grades.FindAsync(gradeId);
+            var data = await _dbContext.Grades.FindAsync(id);
             if (data != null)
             {
                 _dbContext.Grades.Remove(data);

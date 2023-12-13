@@ -8,7 +8,7 @@ namespace Vissoft.Core.Entities
 {
     public class NewsAndEventAttribute
     {
-        public int Id { get; set; } 
+        public int Id { get; set; }
         public string Source { get; set; } = string.Empty;
         public int NewsAndEventId { get; set; }
         public NewsAndEvent NewsAndEvent { get; set; } = null!;

@@ -10,22 +10,22 @@ namespace Vissoft.Infrastructure.Repositories
 {
     public class LessonRepository : ILessonRepository
     {
-        public Task AddNewLesson(LessonCreateDto lessonCreateDto)
+        public Task CreateLesson(LessonCreateDto lessonCreateDto)
         {
             throw new NotImplementedException();
         }
 
-        public Task DeleteLesson(int lessonId)
+        public Task DeleteLesson(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<List<LessonDto>> GetLesson(int lessonId)
+        public Task<List<LessonDto>> GetLessonByThematicId(int thematicId)
         {
             throw new NotImplementedException();
         }
 
-        public Task UpdateLesson(LessonUpdateDto lessonUpdateDto)
+        public Task UpdateLesson(int id, LessonUpdateDto lessonUpdateDto)
         {
             throw new NotImplementedException();
         }

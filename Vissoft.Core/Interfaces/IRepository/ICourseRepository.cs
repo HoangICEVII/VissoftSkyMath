@@ -12,7 +12,7 @@ namespace Vissoft.Core.Interfaces.IRepository
         Task<CourseDto> GetCourseById(int id);
         Task<List<CourseDto>> GetAllCourseByGradeId(int gradeId);
         Task CreateCourse(CourseCreateDto courseCreateDto);
-        Task UpdateCourse(CourseUpdateDto courseUpdateDto);
-        Task DeleteCourse(int couseId);
+        Task UpdateCourse(int id, CourseUpdateDto courseUpdateDto);
+        Task DeleteCourse(int id);
     }
 }

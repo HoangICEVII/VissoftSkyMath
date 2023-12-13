@@ -1,32 +1,44 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Vissoft.Core.DTOs;
+using Vissoft.Core.Interfaces.IService.IAdminService;
 using Vissoft.Core.Interfaces.IService.IApplicationService;
 
 namespace Vissoft.WebApi.Controllers.AdminController
 {
     [Route("api/admin/courses")]
     [ApiController]
+    [Authorize(Roles = "Admin")]
     public class AdminCourseController : ControllerBase
     {
-        private readonly ICourseService _courseDataService;
-        public AdminCourseController(ICourseService courseDataService)
+        private readonly IAdminCourseService _adminCourseService;
+        public AdminCourseController(IAdminCourseService adminCourseService)
         {
-            _courseDataService = courseDataService;
+            _adminCourseService = adminCourseService;
         }
-        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> GetAllCourse()
         {
-            return Ok();
+            try
+            {
+                var responseData = await _adminCourseService.GetAllCourse();
+                return Ok(responseData);
+            }catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
-        [Authorize(Roles = "Admin")]
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetCourseById(int id)
+        public async Task<IActionResult> GetCourseDetail(int id)
         {
-            return Ok();
+            try
+            {
+                var responseData = await _adminCourseService.GetCourseDetail(id);
+                return Ok(responseData);
+            }catch (Exception ex) {
+                return BadRequest(ex.Message);
+            }
         }
-        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> CreateCourse([FromForm] CourseCreateDto courseCreateDto)
         {
@@ -34,7 +46,7 @@ namespace Vissoft.WebApi.Controllers.AdminController
             {
                 if (!ModelState.IsValid)
                     return BadRequest("Du lieu khong hop le");
-                await _courseDataService.CreateCourse(courseCreateDto);
+                await _adminCourseService.CreateCourse(courseCreateDto);
                 return Ok();
             }
             catch (Exception ex)
@@ -42,7 +54,6 @@ namespace Vissoft.WebApi.Controllers.AdminController
                 return BadRequest(ex.ToString());
             }
         }
-        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateCourse(int id, [FromForm] CourseUpdateDto courseUpdateDto)
         {
@@ -50,7 +61,7 @@ namespace Vissoft.WebApi.Controllers.AdminController
             {
                 if (!ModelState.IsValid)
                     return BadRequest("Du lieu khong hop le");
-                await _courseDataService.UpdateCourse(courseUpdateDto);
+                await _adminCourseService.UpdateCourse(id, courseUpdateDto);
                 return Ok();
             }
             catch (Exception ex)
@@ -58,13 +69,12 @@ namespace Vissoft.WebApi.Controllers.AdminController
                 return BadRequest(ex.ToString());
             }
         }
-        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCourse(int id)
         {
             try
             {
-                await _courseDataService.DeleteCourse(id);
+                await _adminCourseService.DeleteCourse(id);
                 return Ok();
             }
             catch (Exception ex)

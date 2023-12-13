@@ -9,9 +9,9 @@ namespace Vissoft.Core.Interfaces.IRepository
 {
     public interface ILessonRepository
     {
-        Task<List<LessonDto>> GetLesson(int lessonId);
-        Task AddNewLesson(LessonCreateDto lessonCreateDto);
-        Task UpdateLesson(LessonUpdateDto lessonUpdateDto);
-        Task DeleteLesson(int lessonId);
+        Task<List<LessonDto>> GetLessonByThematicId(int thematicId);
+        Task CreateLesson(LessonCreateDto lessonCreateDto);
+        Task UpdateLesson(int id, LessonUpdateDto lessonUpdateDto);
+        Task DeleteLesson(int id);
     }
 }
