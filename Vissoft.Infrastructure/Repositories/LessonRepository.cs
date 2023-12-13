@@ -51,8 +51,7 @@ namespace Vissoft.Infrastructure.Repositories
         public async Task UpdateLesson(int id, LessonUpdateDto lessonUpdateDto)
         {
             var data = await _dbContext.Lessons.Where(l => l.Id == id).FirstOrDefaultAsync();
-            Lesson lesson = _mapper.Map<Lesson>(data);
-            if (lesson != null)
+            if (data != null)
             {
                 //lesson.Name = lessonUpdateDto.Name;
                 //lesson.Description = lessonUpdateDto.Description;
