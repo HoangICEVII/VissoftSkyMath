@@ -29,8 +29,8 @@ namespace Vissoft.Infrastructure.Repositories
             {
                 TrueFalse trueFalse = new TrueFalse()
                 {
-                    Topic = obj.Topic,
-                    Answer = obj.Answer,
+                    Topic = obj.TrueFalseTopic,
+                    Answer = obj.TrueFalseAnswer,
                     QuizId = quizId,
                 };
                 await _dbContext.TrueFalses.AddAsync(trueFalse);
@@ -108,8 +108,8 @@ namespace Vissoft.Infrastructure.Repositories
                 {
                     throw new CustomException("Found nothing to update", 404);
                 }
-                trueFalse.Topic = obj.Topic;
-                trueFalse.Answer = obj.Answer;
+                trueFalse.Topic = obj.TrueFalseTopic;
+                trueFalse.Answer = obj.TrueFalseAnswer;
                 _dbContext.TrueFalses.Update(trueFalse);
                 await _dbContext.SaveChangesAsync();
             }

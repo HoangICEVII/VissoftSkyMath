@@ -31,11 +31,11 @@ namespace Vissoft.Infrastructure.Repositories
             {
                 MultipleChoice multipleChoice = new MultipleChoice()
                 {
-                    OptionA = obj.OptionA,
-                    OptionB = obj.OptionB,
-                    OptionC = obj.OptionC,
-                    OptionD = obj.OptionD,
-                    Answer = obj.Answer,
+                    OptionA = obj.MultipleChoiceOptionA,
+                    OptionB = obj.MultipleChoiceOptionB,
+                    OptionC = obj.MultipleChoiceOptionC,
+                    OptionD = obj.MultipleChoiceOptionD,
+                    Answer = obj.MultipleChoiceAnswer,
                     QuizId = quizId,
                 };
                 await _dbContext.MultipleChoices.AddAsync(multipleChoice);
@@ -113,11 +113,11 @@ namespace Vissoft.Infrastructure.Repositories
                 {
                     throw new CustomException("Found nothing to update", 404);
                 }
-                multipleChoice.OptionA = obj.OptionA;
-                multipleChoice.OptionB = obj.OptionB;
-                multipleChoice.OptionC = obj.OptionC;
-                multipleChoice.OptionD = obj.OptionD;
-                multipleChoice.Answer = obj.Answer;
+                multipleChoice.OptionA = obj.MultipleChoiceOptionA;
+                multipleChoice.OptionB = obj.MultipleChoiceOptionB;
+                multipleChoice.OptionC = obj.MultipleChoiceOptionC;
+                multipleChoice.OptionD = obj.MultipleChoiceOptionD;
+                multipleChoice.Answer = obj.MultipleChoiceAnswer;
                 _dbContext.MultipleChoices.Update(multipleChoice);
                 await _dbContext.SaveChangesAsync();
             }

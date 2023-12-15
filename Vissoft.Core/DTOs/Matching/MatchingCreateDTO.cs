@@ -8,7 +8,7 @@ namespace Vissoft.Core.DTOs.Matching
 {
     public class MatchingCreateDTO
     {
-        public string ASide { get; set; } = string.Empty;
-        public string BSide { get; set; } = string.Empty;
+        public string MatchingASide { get; set; } = string.Empty;
+        public string MatchingBSide { get; set; } = string.Empty;
     }
 }

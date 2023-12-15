@@ -8,6 +8,6 @@ namespace Vissoft.Core.DTOs.FillBlank
 {
     public class FillBlankUpdateDTO
     {
-        public string Answer { get; set; } = string.Empty;
+        public string FillBlankAnswer { get; set; } = string.Empty;
     }
 }

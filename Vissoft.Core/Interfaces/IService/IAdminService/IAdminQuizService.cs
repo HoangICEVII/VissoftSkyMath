@@ -14,7 +14,7 @@ namespace Vissoft.Core.Interfaces.IService.IAdminService
 {
     public interface IAdminQuizService
     {
-        Task CreateQuiz(int exerciseId, int quizTypeId, QuizCreateDTO obj, FillBlankCreateDTO? fillBlankCreateDTO, MatchingCreateDTO? matchingCreateDTO, MultipleChoiceCreateDTO? multipleChoiceCreateDTO, TrueFalseCreateDTO? trueFalseCreateDTO);
+        Task CreateQuiz(int exerciseId, int quizTypeId, QuizCreateDTO obj, List<FillBlankCreateDTO>? fillBlankCreateDTO, List<MatchingCreateDTO>? matchingCreateDTO, List<MultipleChoiceCreateDTO>? multipleChoiceCreateDTO, List<TrueFalseCreateDTO>? trueFalseCreateDTO);
         Task UpdateQuiz(int id, QuizUpdateDTO obj);
         Task DeleteQuiz(int id);
     }

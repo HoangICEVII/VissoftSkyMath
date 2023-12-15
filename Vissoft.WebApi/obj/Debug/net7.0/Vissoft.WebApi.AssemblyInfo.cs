@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Vissoft.WebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c80a47ad46dca48fa9db8e2d43fdad5acdadf33")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+091ae04b35bd6719fa4d55b81bad3f1427dab5bf")]
 [assembly: System.Reflection.AssemblyProductAttribute("Vissoft.WebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Vissoft.WebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -9,7 +9,7 @@ namespace Vissoft.Core.DTOs.FillBlank
     public class FillBlankDTO
     {
         public int Id { get; set; }
-        public string Answer { get; set; } = string.Empty;
+        public string FillBackAnswer { get; set; } = string.Empty;
         public int QuizId { get; set; }
     }
 }

@@ -32,7 +32,7 @@ namespace Vissoft.Infrastructure.Repositories
             {
                 FillBlank fillBlank = new FillBlank()
                 {
-                    Answer = obj.Answer,
+                    Answer = obj.FillBlankAnswer,
                     QuizId = quizId,
                 };
                 await _dbContext.FillBlanks.AddAsync(fillBlank);
@@ -110,7 +110,7 @@ namespace Vissoft.Infrastructure.Repositories
                 {
                     throw new CustomException("Found nothing to update", 404);
                 }
-                fillBlank.Answer = obj.Answer;
+                fillBlank.Answer = obj.FillBlankAnswer;
                 _dbContext.FillBlanks.Update(fillBlank);
                 await _dbContext.SaveChangesAsync();
             }

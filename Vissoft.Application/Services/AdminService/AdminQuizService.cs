@@ -34,23 +34,35 @@ namespace Vissoft.Application.Services.AdminService
         }
 
 
-        public async Task CreateQuiz(int exerciseId, int quizTypeId, QuizCreateDTO obj, FillBlankCreateDTO? fillBlankCreateDTO, MatchingCreateDTO? matchingCreateDTO, MultipleChoiceCreateDTO? multipleChoiceCreateDTO, TrueFalseCreateDTO? trueFalseCreateDTO)
+        public async Task CreateQuiz(int exerciseId, int quizTypeId, QuizCreateDTO obj, List<FillBlankCreateDTO>? fillBlankCreateDTO, List<MatchingCreateDTO>? matchingCreateDTO, List<MultipleChoiceCreateDTO>? multipleChoiceCreateDTO, List<TrueFalseCreateDTO>? trueFalseCreateDTO)
         {
             Quiz quiz = await _quizRepository.CreateQuiz(exerciseId, quizTypeId, obj);
             String quizType = _quizTypeRepository.ReturnQuizType(quizTypeId);
             switch(quizType)
             {
                 case "Fill in blank":
-                    await _fillBlankRepository.CreateFillBlank(quiz.Id,fillBlankCreateDTO!);
+                    foreach(var item in fillBlankCreateDTO!)
+                    {
+                        await _fillBlankRepository.CreateFillBlank(quiz.Id, item);
+                    }
                     break;
                 case "Matching":
-                    await _matchingRepository.CreateMatching(quiz.Id, matchingCreateDTO!);
+                    foreach(var item in matchingCreateDTO!)
+                    {
+                        await _matchingRepository.CreateMatching(quiz.Id, item);
+                    }
                     break;
                 case "Multiple choice":
-                    await _multipleChoiceRepository.CreateMultipleChoice(quiz.Id, multipleChoiceCreateDTO!);
+                    foreach(var item in multipleChoiceCreateDTO!)
+                    {
+                        await _multipleChoiceRepository.CreateMultipleChoice(quiz.Id, item);
+                    }
                     break;
                 case "True false":
-                    await _trueFalseRepository.CreateTrueFalse(quiz.Id, trueFalseCreateDTO!);
+                    foreach(var item in trueFalseCreateDTO!)
+                    {
+                        await _trueFalseRepository.CreateTrueFalse(quiz.Id, item);
+                    }
                     break;
                 default: throw new CustomException("An error occurred", 500);
             }

@@ -29,8 +29,8 @@ namespace Vissoft.Infrastructure.Repositories
             {
                 Matching matching = new Matching()
                 {
-                    ASide = obj.ASide,
-                    BSide = obj.BSide,
+                    ASide = obj.MatchingASide,
+                    BSide = obj.MatchingBSide,
                     QuizId = quizId,
                 };
                 await _dbContext.Matchings.AddAsync(matching);
@@ -108,8 +108,8 @@ namespace Vissoft.Infrastructure.Repositories
                 {
                     throw new CustomException("Found nothing to update", 404);
                 }
-                matching.ASide = obj.ASide;
-                matching.BSide = obj.BSide;
+                matching.ASide = obj.MatchingASide;
+                matching.BSide = obj.MatchingBSide;
                 _dbContext.Matchings.Update(matching);
                 await _dbContext.SaveChangesAsync();
             }

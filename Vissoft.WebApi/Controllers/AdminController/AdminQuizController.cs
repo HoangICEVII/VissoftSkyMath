@@ -25,11 +25,11 @@ namespace Vissoft.WebApi.Controllers.AdminController
         }
 
         [HttpPost]
-        public async Task<IActionResult> PostQuiz(int exerciseId, int quizTypeId, [FromBody] QuizCreateDTO obj, [FromQuery] FillBlankCreateDTO? fillBlankCreateDTO, [FromQuery] MatchingCreateDTO? matchingCreateDTO, [FromQuery] MultipleChoiceCreateDTO? multipleChoiceCreateDTO, [FromQuery] TrueFalseCreateDTO? trueFalseCreateDTO)
+        public async Task<IActionResult> PostQuiz(int exerciseId, int quizTypeId, [FromBody] QuizRequest request)
         {
             try
             {
-                await _adminQuizService.CreateQuiz(exerciseId,quizTypeId,obj,fillBlankCreateDTO,matchingCreateDTO,multipleChoiceCreateDTO,trueFalseCreateDTO);
+                await _adminQuizService.CreateQuiz(exerciseId,quizTypeId,request.QuizCreateDTO,request.FillBlankCreateDTOs,request.MatchingCreateDTOs,request.MultipleChoiceCreateDTOs,request.TrueFalseCreateDTOs);
                 return Ok();
             }
             catch (CustomException e)

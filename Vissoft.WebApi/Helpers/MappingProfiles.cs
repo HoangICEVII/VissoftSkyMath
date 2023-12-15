@@ -25,10 +25,11 @@ namespace Vissoft.WebApi.Helpers
             CreateMap<QuizType, QuizTypeDTO>();
             CreateMap<Quiz, QuizDTO>();
             CreateMap<Exercise, ExerciseDTO>();
-            CreateMap<FillBlank, FillBlankDTO>();
-            CreateMap<Matching, MatchingDTO>();
-            CreateMap<MultipleChoice, MultipleChoiceDTO>();
-            CreateMap<TrueFalse, TrueFalseDTO>();
+            CreateMap<FillBlank, FillBlankDTO>().ForMember(x => x.FillBackAnswer, opt => opt.MapFrom(y => y.Answer));
+            CreateMap<Matching, MatchingDTO>().ForMember(x => x.MatchingASide, opt => opt.MapFrom(y => y.ASide)).ForMember(x => x.MatchingBSide, opt => opt.MapFrom(y => y.BSide));
+            CreateMap<MultipleChoice, MultipleChoiceDTO>().ForMember(x => x.MultipleChoiceOptionA, opt => opt.MapFrom(y => y.OptionA)).ForMember(x => x.MultipleChoiceOptionB, opt => opt.MapFrom(y => y.OptionB))
+                .ForMember(x => x.MultipleChoiceOptionC, opt => opt.MapFrom(y => y.OptionC)).ForMember(x => x.MultipleChoiceOptionD, opt => opt.MapFrom(y => y.OptionD)).ForMember(x => x.MultipleChoiceAnswer, opt => opt.MapFrom(y => y.Answer));
+            CreateMap<TrueFalse, TrueFalseDTO>().ForMember(x => x.TrueFalseTopic, opt => opt.MapFrom(y => y.Topic)).ForMember(x => x.TrueFalseAnswer, opt => opt.MapFrom(y => y.Answer));
             CreateMap<Quiz, QuizTotalDTO>();
         }
     }

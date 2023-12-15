@@ -9,8 +9,8 @@ namespace Vissoft.Core.DTOs.TrueFalse
     public class TrueFalseDTO
     {
         public int Id { get; set; }
-        public string? Topic { get; set; }
-        public bool Answer { get; set; }
+        public string? TrueFalseTopic { get; set; }
+        public bool TrueFalseAnswer { get; set; }
         public int QuizId { get; set; }
     }
 }
