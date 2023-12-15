@@ -15,6 +15,8 @@ using Vissoft.WebApi;
 using Microsoft.Extensions.FileProviders;
 using Vissoft.Core.Interfaces.IService.IApplicationService;
 using Vissoft.Application.Services.ApplicationService;
+using Vissoft.Core.Interfaces.IService.IAdminService;
+using Vissoft.Application.Services.AdminService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -79,6 +81,10 @@ builder.Services.AddAuthentication(options =>
 
 //Service Dependency Injection
 builder.Services.AddScoped<IApplicationCourseService, ApplicationCourseService>();
+builder.Services.AddScoped<IAdminExerciseService, AdminExerciseService>();
+builder.Services.AddScoped<IApplicationExerciseService, ApplicationExerciseService>();
+builder.Services.AddScoped<IAdminQuizTypeService, AdminQuizTypeService>();
+builder.Services.AddScoped<IAdminQuizService, AdminQuizService>();
 builder.Services.AddScoped<IApplicationUserService, ApplicationUserService>();
 
 //Repository Dependency Injection
@@ -87,6 +93,13 @@ builder.Services.AddScoped<IGradeRepository, GradeRepository>();
 builder.Services.AddScoped<ILessonRepository, LessonRepository>();
 builder.Services.AddScoped<IThematicRepository, ThematicRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IQuizTypeRepository, QuizTypeRepository>();
+builder.Services.AddScoped<IFillBlankRepository, FillBlankRepository>();
+builder.Services.AddScoped<IMatchingRepository, MatchingRepository>();
+builder.Services.AddScoped<IMultipleChoiceRepository, MultipleChoiceRepository>();
+builder.Services.AddScoped<ITrueFalseRepository, TrueFalseRepository>();
+builder.Services.AddScoped<IQuizRepository, QuizRepository>();
+builder.Services.AddScoped<IExerciseRepository, ExerciseRepository>();
 
 //DbContext Denpendency Injection
 builder.Services.AddScoped<VissoftDatabaseContext, VissoftDatabaseContext>();

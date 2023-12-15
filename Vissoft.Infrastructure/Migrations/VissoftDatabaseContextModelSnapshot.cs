@@ -36,7 +36,6 @@ namespace Vissoft.Infrastructure.Migrations
                         .HasColumnType("TIMESTAMP");
 
                     b.Property<int?>("CurriculumId")
-                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
@@ -82,6 +81,56 @@ namespace Vissoft.Infrastructure.Migrations
                     b.HasIndex("SubjectId");
 
                     b.ToTable("course", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Color = "#ffb74a",
+                            CreatedDate = new DateTime(2023, 12, 15, 20, 48, 58, 951, DateTimeKind.Local).AddTicks(6830),
+                            GradeId = 1,
+                            ImgLink = "Images/Course/course-1.png",
+                            Info = "Khóa lớp 1 bao gồm các bài tập tự luyện kèm lời giải hay cho môn Toán lớp 1 với nhiều dạng bài khác nhau như tính, điền dấu, so sánh số, giải toán có lời văn, toán đố",
+                            Name = "Khai giảng khóa lớp 1",
+                            Status = true,
+                            SubjectId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Color = "#00bc51",
+                            CreatedDate = new DateTime(2023, 12, 15, 20, 48, 58, 951, DateTimeKind.Local).AddTicks(6833),
+                            GradeId = 2,
+                            ImgLink = "Images/Course/course-2.png",
+                            Info = "Khóa lớp 2 bao gồm các bài tập tự luyện kèm lời giải hay cho môn Toán lớp 2 với nhiều dạng bài khác nhau như tính, điền dấu, so sánh số, giải toán có lời văn, toán đố",
+                            Name = "Khai giảng khóa lớp 2",
+                            Status = true,
+                            SubjectId = 1
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Color = "#ff9679",
+                            CreatedDate = new DateTime(2023, 12, 15, 20, 48, 58, 951, DateTimeKind.Local).AddTicks(6835),
+                            GradeId = 3,
+                            ImgLink = "Images/Course/course-1.png",
+                            Info = "Khóa lớp 3 bao gồm các bài tập tự luyện kèm lời giải hay cho môn Toán lớp 1 với nhiều dạng bài khác nhau như tính, điền dấu, so sánh số, giải toán có lời văn, toán đố",
+                            Name = "Khai giảng khóa lớp 3",
+                            Status = true,
+                            SubjectId = 1
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Color = "#1dc2da",
+                            CreatedDate = new DateTime(2023, 12, 15, 20, 48, 58, 951, DateTimeKind.Local).AddTicks(6837),
+                            GradeId = 4,
+                            ImgLink = "Images/Course/course-2.png",
+                            Info = "Khóa lớp 4 bao gồm các bài tập tự luyện kèm lời giải hay cho môn Toán lớp 1 với nhiều dạng bài khác nhau như tính, điền dấu, so sánh số, giải toán có lời văn, toán đố",
+                            Name = "Khai giảng khóa lớp 4",
+                            Status = true,
+                            SubjectId = 1
+                        });
                 });
 
             modelBuilder.Entity("Vissoft.Core.Entities.SkyMathEntities.Curriculum", b =>
@@ -111,6 +160,29 @@ namespace Vissoft.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("curriculum", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedDate = new DateTime(2023, 12, 15, 20, 48, 58, 951, DateTimeKind.Local).AddTicks(6709),
+                            Name = "Kết nối tri thức với cuộc sống",
+                            Status = true
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedDate = new DateTime(2023, 12, 15, 20, 48, 58, 951, DateTimeKind.Local).AddTicks(6711),
+                            Name = "Cánh diều",
+                            Status = true
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedDate = new DateTime(2023, 12, 15, 20, 48, 58, 951, DateTimeKind.Local).AddTicks(6713),
+                            Name = "Chân trường sáng tạo",
+                            Status = true
+                        });
                 });
 
             modelBuilder.Entity("Vissoft.Core.Entities.SkyMathEntities.Exercise", b =>
@@ -131,6 +203,32 @@ namespace Vissoft.Infrastructure.Migrations
                     b.HasIndex("LessonId");
 
                     b.ToTable("exercise", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            LessonId = 1,
+                            Name = "Nhận biết các số từ 0 đến 5"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            LessonId = 1,
+                            Name = "Cách viết các số từ 0 đến 5"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            LessonId = 1,
+                            Name = "Đếm đến 5 (Phần 1)"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            LessonId = 1,
+                            Name = "Đếm đến 5 (Phần 2)"
+                        });
                 });
 
             modelBuilder.Entity("Vissoft.Core.Entities.SkyMathEntities.FillBlank", b =>
@@ -167,6 +265,68 @@ namespace Vissoft.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("grade", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Lớp 1"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Lớp 2"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Lớp 3"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "Lớp 4"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Name = "Lớp 5"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Name = "Lớp 6"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Name = "Lớp 7"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Name = "Lớp 8"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Name = "Lớp 9"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Name = "Lớp 10"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            Name = "Lớp 11"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            Name = "Lớp 12"
+                        });
                 });
 
             modelBuilder.Entity("Vissoft.Core.Entities.SkyMathEntities.Introduce", b =>
@@ -191,6 +351,15 @@ namespace Vissoft.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("introduce", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Content = "Tại lớp học, các thầy cô luôn có những phương pháp giảng dạy để truyền ngọn lửa đam mê môn học cho các con, giúp khơi gợi niềm say mê học tập.",
+                            Status = true,
+                            Title = "Toán học SkyMath"
+                        });
                 });
 
             modelBuilder.Entity("Vissoft.Core.Entities.SkyMathEntities.Lesson", b =>
@@ -233,6 +402,44 @@ namespace Vissoft.Infrastructure.Migrations
                     b.HasIndex("ThematicId");
 
                     b.ToTable("lesson", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedDate = new DateTime(2023, 12, 15, 20, 48, 58, 951, DateTimeKind.Local).AddTicks(6877),
+                            Description = "",
+                            Name = "Các số 0,1,2,3,4,5",
+                            Status = true,
+                            ThematicId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedDate = new DateTime(2023, 12, 15, 20, 48, 58, 951, DateTimeKind.Local).AddTicks(6879),
+                            Description = "",
+                            Name = "Các số 6,7,8,9,10",
+                            Status = true,
+                            ThematicId = 1
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedDate = new DateTime(2023, 12, 15, 20, 48, 58, 951, DateTimeKind.Local).AddTicks(6881),
+                            Description = "",
+                            Name = "Nhiều hơn, ít hơn, bằng nhau",
+                            Status = true,
+                            ThematicId = 1
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreatedDate = new DateTime(2023, 12, 15, 20, 48, 58, 951, DateTimeKind.Local).AddTicks(6882),
+                            Description = "",
+                            Name = "So sánh số",
+                            Status = true,
+                            ThematicId = 1
+                        });
                 });
 
             modelBuilder.Entity("Vissoft.Core.Entities.SkyMathEntities.Matching", b =>
@@ -333,6 +540,48 @@ namespace Vissoft.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("newsAndEvent", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Content = "Mọi thông tin về vòng thi sắp tới đây đều được cập nhật và thông báo tại đây",
+                            CreatedDate = new DateTime(2023, 12, 15, 20, 48, 58, 951, DateTimeKind.Local).AddTicks(6760),
+                            ImageLink = "Images/NewAndEvent/news-1.png",
+                            Overview = "Mọi thông tin về vòng thi sắp tới đây đều được cập nhật và thông báo tại đây",
+                            Status = true,
+                            Title = "Mở vòng thi số 02 Violympic môn Toán bằng Tiếng Anh"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Content = "Mọi thông tin về vòng thi sắp tới đây đều được cập nhật và thông báo tại đây",
+                            CreatedDate = new DateTime(2023, 12, 15, 20, 48, 58, 951, DateTimeKind.Local).AddTicks(6762),
+                            ImageLink = "Images/NewAndEvent/news-2.png",
+                            Overview = "Mọi thông tin về vòng thi sắp tới đây đều được cập nhật và thông báo tại đây",
+                            Status = true,
+                            Title = "Mở vòng thi số 02 Violympic môn Toán bằng Tiếng Anh"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Content = "Mọi thông tin về vòng thi sắp tới đây đều được cập nhật và thông báo tại đây",
+                            CreatedDate = new DateTime(2023, 12, 15, 20, 48, 58, 951, DateTimeKind.Local).AddTicks(6763),
+                            ImageLink = "Images/NewAndEvent/news-3.png",
+                            Overview = "Mọi thông tin về vòng thi sắp tới đây đều được cập nhật và thông báo tại đây",
+                            Status = true,
+                            Title = "Mở vòng thi số 02 Violympic môn Toán bằng Tiếng Anh"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Content = "Mọi thông tin về vòng thi sắp tới đây đều được cập nhật và thông báo tại đây",
+                            CreatedDate = new DateTime(2023, 12, 15, 20, 48, 58, 951, DateTimeKind.Local).AddTicks(6764),
+                            ImageLink = "Images/NewAndEvent/news-4.png",
+                            Overview = "Mọi thông tin về vòng thi sắp tới đây đều được cập nhật và thông báo tại đây",
+                            Status = true,
+                            Title = "Mở vòng thi số 02 Violympic môn Toán bằng Tiếng Anh"
+                        });
                 });
 
             modelBuilder.Entity("Vissoft.Core.Entities.SkyMathEntities.Quiz", b =>
@@ -414,6 +663,28 @@ namespace Vissoft.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("quizType", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Fill in blank"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Matching"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Multiple choice"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "True false"
+                        });
                 });
 
             modelBuilder.Entity("Vissoft.Core.Entities.SkyMathEntities.RelationalEntities.ResourceType", b =>
@@ -429,6 +700,23 @@ namespace Vissoft.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("resourceType", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Text"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Audio"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Video"
+                        });
                 });
 
             modelBuilder.Entity("Vissoft.Core.Entities.SkyMathEntities.Resource", b =>
@@ -464,6 +752,32 @@ namespace Vissoft.Infrastructure.Migrations
                     b.HasIndex("ResourceTypeId");
 
                     b.ToTable("resource", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            LessonId = 1,
+                            Link = "https://youtu.be/THQBntZoHaI",
+                            Name = "Các số 0,1,2,3,4,5",
+                            ResourceTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 2,
+                            LessonId = 2,
+                            Link = "https://youtu.be/zzAdZZ-kgyk",
+                            Name = "Các số 6,7,8,9,10",
+                            ResourceTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 3,
+                            LessonId = 3,
+                            Link = "https://youtu.be/eFt1jHGAFYE",
+                            Name = "Nhiều hơn, ít hơn, bằng nhau",
+                            ResourceTypeId = 3
+                        });
                 });
 
             modelBuilder.Entity("Vissoft.Core.Entities.SkyMathEntities.Slide", b =>
@@ -488,6 +802,29 @@ namespace Vissoft.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("slide", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            ImageLink = "Images/Slide/heroes-1.png",
+                            Slogan = "Cùng SkyMath bứt phá Điểm 10 không khó",
+                            Status = true
+                        },
+                        new
+                        {
+                            Id = 2,
+                            ImageLink = "Images/Slide/heroes-2.png",
+                            Slogan = "Cùng SkyMath bứt phá Điểm 10 không khó",
+                            Status = true
+                        },
+                        new
+                        {
+                            Id = 3,
+                            ImageLink = "Images/Slide/heroes-3.png",
+                            Slogan = "Cùng SkyMath bứt phá Điểm 10 không khó",
+                            Status = true
+                        });
                 });
 
             modelBuilder.Entity("Vissoft.Core.Entities.SkyMathEntities.Subject", b =>
@@ -517,6 +854,15 @@ namespace Vissoft.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("subject", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedDate = new DateTime(2023, 12, 15, 20, 48, 58, 951, DateTimeKind.Local).AddTicks(6673),
+                            Name = "Toán",
+                            Status = true
+                        });
                 });
 
             modelBuilder.Entity("Vissoft.Core.Entities.SkyMathEntities.Teacher", b =>
@@ -544,6 +890,40 @@ namespace Vissoft.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("teacher", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Avatar = "Images/Teacher/teacher-1.png",
+                            Description = "Với kinh nghiệm nhiều năm trong nghề, thầy đã không chỉ giup các em học sinh trở nên yêu thích môn Toán, mà còn đạt giải cao trong các cuộc thi lớn...",
+                            Name = "Thầy Nguyễn Duy Minh",
+                            WorkPlace = "Trường Tiểu học Lê Văn Tám"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Avatar = "Images/Teacher/teacher-2.png",
+                            Description = "Với kinh nghiệm nhiều năm trong nghề, thầy đã không chỉ giup các em học sinh trở nên yêu thích môn Toán, mà còn đạt giải cao trong các cuộc thi lớn...",
+                            Name = "Cô Hoàng Thị Cẩm Tú",
+                            WorkPlace = "Trường Tiểu học Lê Văn Tám"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Avatar = "Images/Teacher/teacher-3.png",
+                            Description = "Với kinh nghiệm nhiều năm trong nghề, thầy đã không chỉ giup các em học sinh trở nên yêu thích môn Toán, mà còn đạt giải cao trong các cuộc thi lớn...",
+                            Name = "Cô Lương Thùy Linh",
+                            WorkPlace = "Trường Tiểu học Lê Văn Tám"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Avatar = "Images/Teacher/teacher-4.png",
+                            Description = "Với kinh nghiệm nhiều năm trong nghề, thầy đã không chỉ giup các em học sinh trở nên yêu thích môn Toán, mà còn đạt giải cao trong các cuộc thi lớn...",
+                            Name = "Cô Trần Mai Phương",
+                            WorkPlace = "Trường Tiểu học Lê Văn Tám"
+                        });
                 });
 
             modelBuilder.Entity("Vissoft.Core.Entities.SkyMathEntities.Thematic", b =>
@@ -579,6 +959,40 @@ namespace Vissoft.Infrastructure.Migrations
                     b.HasIndex("CourseId");
 
                     b.ToTable("thematic", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CourseId = 1,
+                            CreatedDate = new DateTime(2023, 12, 15, 20, 48, 58, 951, DateTimeKind.Local).AddTicks(6852),
+                            Name = "Chủ đề 1: Các số từ 0 đến 10",
+                            Status = true
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CourseId = 1,
+                            CreatedDate = new DateTime(2023, 12, 15, 20, 48, 58, 951, DateTimeKind.Local).AddTicks(6854),
+                            Name = "Chủ đề 2: Làm quen với một số hình phẳng",
+                            Status = true
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CourseId = 1,
+                            CreatedDate = new DateTime(2023, 12, 15, 20, 48, 58, 951, DateTimeKind.Local).AddTicks(6855),
+                            Name = "Chủ đề 3: Phép cộng, phép trừ trong phạm vi 10",
+                            Status = true
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CourseId = 1,
+                            CreatedDate = new DateTime(2023, 12, 15, 20, 48, 58, 951, DateTimeKind.Local).AddTicks(6856),
+                            Name = "Chủ đề 4: Làm quen với một số hình khối",
+                            Status = true
+                        });
                 });
 
             modelBuilder.Entity("Vissoft.Core.Entities.SkyMathEntities.TrueFalse", b =>

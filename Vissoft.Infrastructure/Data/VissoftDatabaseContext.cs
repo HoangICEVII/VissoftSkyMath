@@ -11,6 +11,7 @@ using Vissoft.Core.Entities;
 using Vissoft.Core.Entities.SkyMathEntities;
 using Vissoft.Core.Entities.SkyMathEntities.RelationalEntities;
 using Vissoft.Core.Helper;
+using Vissoft.Infrastructure.Extensions;
 
 namespace Vissoft.Infrastructure.Data
 {
@@ -70,6 +71,7 @@ namespace Vissoft.Infrastructure.Data
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+            modelBuilder.Seed();
         }
     }
 }

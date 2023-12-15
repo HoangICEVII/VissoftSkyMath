@@ -365,11 +365,11 @@ namespace Vissoft.Infrastructure.Extensions
                     Name = "Matching"
                 },
                 new QuizType {
-                    Id = 1,
+                    Id = 3,
                     Name = "Multiple choice"
                 },
                 new QuizType {
-                    Id = 1,
+                    Id = 4,
                     Name = "True false"
                 }
             );

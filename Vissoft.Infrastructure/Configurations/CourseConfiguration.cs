@@ -21,6 +21,7 @@ namespace Vissoft.Infrastructure.Configurations
             builder.Property(c => c.Description).HasMaxLength(1000);
             builder.Property(c => c.ImgLink).IsRequired();
             builder.Property(c => c.Color).IsRequired();
+            builder.Property(c => c.CurriculumId).IsRequired(false);
             builder.Property(c => c.CreatedDate).HasColumnType("TIMESTAMP");
             builder.Property(c => c.LastModifiedDate).HasColumnType("TIMESTAMP");
             builder.Property(c => c.Status).HasDefaultValue(true);
