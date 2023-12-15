@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Vissoft.Core.DTOs;
 using Vissoft.Core.Entities;
+using Vissoft.Core.Entities.SkyMathEntities;
 using Vissoft.Core.Interfaces.IRepository;
 using Vissoft.Infrastructure.Data;
 

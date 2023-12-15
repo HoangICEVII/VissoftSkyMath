@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Vissoft.Core.Entities;
+using Vissoft.Core.Entities.SkyMathEntities;
 
 namespace Vissoft.Infrastructure.Configurations
 {
@@ -18,7 +18,7 @@ namespace Vissoft.Infrastructure.Configurations
             builder.HasKey(c => c.Id);
             builder.Property(c => c.Id).ValueGeneratedOnAdd();
             builder.Property(c => c.Name).IsRequired().HasMaxLength(100);
-            builder.Property(c => c.Description).IsRequired().HasMaxLength(1000);
+            builder.Property(c => c.Description).HasMaxLength(1000);
             builder.Property(c => c.ImgLink).IsRequired();
             builder.Property(c => c.Color).IsRequired();
             builder.Property(c => c.CreatedDate).HasColumnType("TIMESTAMP");

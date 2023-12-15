@@ -1,8 +1,8 @@
-name: dockercompose9537682645180753916
+name: dockercompose7568735547464101689
 services:
   vissoft.webapi:
     build:
-      context: C:\Users\Hoang\Desktop\VissoftSkyMath
+      context: H:\Work\HoangVissoft
       dockerfile: Vissoft.WebApi/Dockerfile
     container_name: vissoft-api
     environment:
@@ -28,13 +28,13 @@ services:
     restart: always
     volumes:
       - type: bind
-        source: C:\Users\Hoang\AppData\Roaming/Microsoft/UserSecrets
+        source: C:\Users\Admin\AppData\Roaming/Microsoft/UserSecrets
         target: /root/.microsoft/usersecrets
         read_only: true
         bind:
           create_host_path: true
       - type: bind
-        source: C:\Users\Hoang\AppData\Roaming/ASP.NET/Https
+        source: C:\Users\Admin\AppData\Roaming/ASP.NET/Https
         target: /root/.aspnet/https
         read_only: true
         bind:
@@ -53,4 +53,4 @@ services:
         protocol: tcp
 networks:
   backend:
-    name: dockercompose9537682645180753916_backend
+    name: dockercompose7568735547464101689_backend

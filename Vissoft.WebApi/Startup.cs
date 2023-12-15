@@ -32,7 +32,7 @@ namespace Vissoft.WebApi
             }
             catch (Exception ex)
             {
-
+                throw new Exception(ex.ToString()); 
             }
         }
     }

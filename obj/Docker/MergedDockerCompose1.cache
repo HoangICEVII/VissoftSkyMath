@@ -1,8 +1,8 @@
-name: dockercompose9537682645180753916
+name: dockercompose7568735547464101689
 services:
   vissoft.webapi:
     build:
-      context: C:\Users\Hoang\Desktop\VissoftSkyMath
+      context: H:\Work\HoangVissoft
       dockerfile: Vissoft.WebApi/Dockerfile
       args:
         BUILD_CONFIGURATION: Debug
@@ -23,10 +23,10 @@ services:
       DB_NAME: vissoft
       DB_ROOT_PASSWORD: "123456"
       DOTNET_USE_POLLING_FILE_WATCHER: "1"
-      NUGET_FALLBACK_PACKAGES: ""
+      NUGET_FALLBACK_PACKAGES: /.nuget/fallbackpackages
     image: vissoftwebapi:dev
     labels:
-      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /.nuget/packages  "/app/bin/Debug/net7.0/Vissoft.WebApi.dll"'
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /.nuget/packages --additionalProbingPath /.nuget/fallbackpackages  "/app/bin/Debug/net7.0/Vissoft.WebApi.dll"'
       com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof dotnet); then kill $$PID; fi"
       com.microsoft.visualstudio.debuggee.program: dotnet
       com.microsoft.visualstudio.debuggee.workingdirectory: /app
@@ -47,65 +47,71 @@ services:
     tty: true
     volumes:
       - type: bind
-        source: C:\Users\Hoang\.nuget\packages\
+        source: C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages
+        target: /.nuget/fallbackpackages
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\Admin\.nuget\packages\
         target: /.nuget/packages
         read_only: true
         bind:
           create_host_path: true
       - type: bind
-        source: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\HotReload
+        source: H:\VisualStudio\Common7\IDE\CommonExtensions\Microsoft\HotReload
         target: /HotReloadAgent
         read_only: true
         bind:
           create_host_path: true
       - type: bind
-        source: C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\HotReloadProxy\linux-x64\net7.0
+        source: H:\VisualStudio\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\HotReloadProxy\linux-x64\net7.0
         target: /HotReloadProxy
         read_only: true
         bind:
           create_host_path: true
       - type: bind
-        source: C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\TokenService.Proxy\linux-x64\net7.0
+        source: H:\VisualStudio\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\TokenService.Proxy\linux-x64\net7.0
         target: /TokenService.Proxy
         read_only: true
         bind:
           create_host_path: true
       - type: bind
-        source: C:\Users\Hoang\Desktop\VissoftSkyMath\Vissoft.WebApi
+        source: H:\Work\HoangVissoft\Vissoft.WebApi
         target: /app
         bind:
           create_host_path: true
       - type: bind
-        source: C:\Users\Hoang\AppData\Roaming/ASP.NET/Https
+        source: C:\Users\Admin\AppData\Roaming/ASP.NET/Https
         target: /home/app/.aspnet/https
         read_only: true
         bind:
           create_host_path: true
       - type: bind
-        source: C:\Users\Hoang\AppData\Roaming/Microsoft/UserSecrets
+        source: C:\Users\Admin\AppData\Roaming/Microsoft/UserSecrets
         target: /home/app/.microsoft/usersecrets
         read_only: true
         bind:
           create_host_path: true
       - type: bind
-        source: C:\Users\Hoang\vsdbg\vs2017u5
+        source: C:\Users\Admin\vsdbg\vs2017u5
         target: /remote_debugger
         bind:
           create_host_path: true
       - type: bind
-        source: C:\Users\Hoang\AppData\Roaming/ASP.NET/Https
+        source: C:\Users\Admin\AppData\Roaming/ASP.NET/Https
         target: /root/.aspnet/https
         read_only: true
         bind:
           create_host_path: true
       - type: bind
-        source: C:\Users\Hoang\AppData\Roaming/Microsoft/UserSecrets
+        source: C:\Users\Admin\AppData\Roaming/Microsoft/UserSecrets
         target: /root/.microsoft/usersecrets
         read_only: true
         bind:
           create_host_path: true
       - type: bind
-        source: C:\Users\Hoang\Desktop\VissoftSkyMath
+        source: H:\Work\HoangVissoft
         target: /src
         bind:
           create_host_path: true
@@ -123,4 +129,4 @@ services:
         protocol: tcp
 networks:
   backend:
-    name: dockercompose9537682645180753916_backend
+    name: dockercompose7568735547464101689_backend

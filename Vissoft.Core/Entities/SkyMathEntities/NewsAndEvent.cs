@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Vissoft.Core.Entities.SkyMathEntities.RelationalEntities;
 using Vissoft.Core.Helper;
 
-namespace Vissoft.Core.Entities
+namespace Vissoft.Core.Entities.SkyMathEntities
 {
     public class NewsAndEvent : IDateTracking
     {

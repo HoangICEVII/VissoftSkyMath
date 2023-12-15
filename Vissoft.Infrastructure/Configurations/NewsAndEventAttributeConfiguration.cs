@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Vissoft.Core.Entities;
+using Vissoft.Core.Entities.SkyMathEntities.RelationalEntities;
 
 namespace Vissoft.Infrastructure.Configurations
 {
